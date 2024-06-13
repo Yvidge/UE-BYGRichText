@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Core/BYGRichTextMarkupProcessing.h"
 #include "Core/BYGStyleTagData.h"
+#include "UObject/Interface.h"
 #include "BYGInlineTextTooltip.generated.h"
 
 UINTERFACE( MinimalAPI )

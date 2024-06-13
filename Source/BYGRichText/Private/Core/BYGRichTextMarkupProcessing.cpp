@@ -12,6 +12,7 @@
 #include "BYGRichTextRuntimeSettings.h"
 #include "BYGStyleStack.h"
 #include "BYGRichTextModule.h"
+#include "Settings/BYGRichTextStyle.h"
 
 
 static const FString CloseTag = "/";

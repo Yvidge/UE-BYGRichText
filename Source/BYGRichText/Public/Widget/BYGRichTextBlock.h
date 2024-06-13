@@ -6,6 +6,7 @@
 #include "Core/BYGRichTextMarkupProcessing.h"
 #include "BYGRichTextBlock.generated.h"
 
+
 UENUM()
 enum class EBYGRichTextOverflowBehavior : uint8
 {
@@ -13,6 +14,7 @@ enum class EBYGRichTextOverflowBehavior : uint8
 	Clip,
 };
 
+class SVerticalBox;
 class SRichTextBlock;
 class URichTextBlockDecorator;
 class ITextDecorator;

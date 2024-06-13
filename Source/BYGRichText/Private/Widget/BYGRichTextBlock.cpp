@@ -11,6 +11,7 @@
 #include "Widgets/Text/SRichTextBlock.h"
 #include <Modules/ModuleManager.h>
 #include "BYGRichTextModule.h"
+#include "Settings/BYGRichTextStylesheet.h"
 
 #define LOCTEXT_NAMESPACE "BYGRichText"
 

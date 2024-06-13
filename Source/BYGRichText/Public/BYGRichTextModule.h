@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
+#include "Styling/SlateBrush.h"
 #include "UObject/GCObject.h"
+
+class UTexture2D;
 
 class FBYGRichTextModule : public IModuleInterface, public FGCObject
 {
@@ -16,6 +19,7 @@ public:
 
 	// Begin FGCObject overrides
 	virtual void AddReferencedObjects( FReferenceCollector& Collector ) override;
+	virtual FString GetReferencerName() const override;
 	// End FGCObject overrides
 
 	const FSlateBrush* GetIconBrush( const FString& Path, const FVector2D& MaxSize );

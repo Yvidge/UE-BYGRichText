@@ -3,11 +3,13 @@
 #include "BYGRichTextTestWindow.h"
 
 #include "BYGRichTextUIStyle.h"
+#include "Engine/Engine.h"
 #include "Widget/BYGRichTextBlock.h"
 #include "Settings/BYGRichTextStylesheet.h"
 #include "Widgets/Layout/SScrollBox.h"
 #include "Engine/Font.h"
 #include "Interfaces/IPluginManager.h"
+#include "Settings/BYGRichTextStyle.h"
 
 FString FillTestStylesheetText( UBYGRichTextStylesheet* Stylesheet, FString Payload = "" )
 {
@@ -243,7 +245,7 @@ void SBYGRichTextTestWindow::Construct( const FArguments& InArgs )
 	[
 		SNew( SBorder )
 		.Padding( 3 )
-		.BorderImage( FEditorStyle::GetBrush( "ToolPanel.GroupBorder" ) )
+		.BorderImage( FAppStyle::GetBrush( "ToolPanel.GroupBorder" ) )
 		[
 			SNew( SScrollBox )
 			.Orientation( Orient_Vertical )
@@ -259,4 +261,9 @@ void SBYGRichTextTestWindow::AddReferencedObjects( FReferenceCollector& Collecto
 {
 	Collector.AddReferencedObject( RichTextBlock );
 	Collector.AddReferencedObject( Stylesheet );
+}
+
+FString SBYGRichTextTestWindow::GetReferencerName() const
+{
+	return TEXT("SBYGRichTextTestWindow");
 }

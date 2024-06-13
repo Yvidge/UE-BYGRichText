@@ -18,6 +18,7 @@
 
 #include "KismetCompilerModule.h"
 #include "BYGStylesheetCompiler.h"
+#include "Widgets/Docking/SDockTab.h"
 
 #define LOCTEXT_NAMESPACE "BYGRichTextEditorModule"
 
@@ -29,7 +30,7 @@ namespace BYGRichTextModule
 TSharedRef<SDockTab> SpawnTestTab( const FSpawnTabArgs& Args )
 {
 	return SNew( SDockTab )
-		.Icon( FBYGRichTextUIStyle::GetBrush( "BYGRichText.TabIcon" ) )
+		//.Icon( FBYGRichTextUIStyle::GetBrush( "BYGRichText.TabIcon" ) )
 		.TabRole( ETabRole::NomadTab )
 		.Label( NSLOCTEXT( "BYGRichText", "TabTitle", "BYG Rich Text Test" ) )
 		[

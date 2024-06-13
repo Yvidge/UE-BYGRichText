@@ -9,6 +9,8 @@
 #include <Framework/Text/SlateImageRun.h>
 #include <Fonts/FontMeasure.h>
 
+#include "Framework/Application/SlateApplication.h"
+
 TSharedRef< FBYGInlineTextFormatDecorator > FBYGInlineTextFormatDecorator::Create( FString InRunName, const UBYGRichTextBlock* InOwner )
 {
 	return MakeShareable( new FBYGInlineTextFormatDecorator( InRunName, InOwner ) );

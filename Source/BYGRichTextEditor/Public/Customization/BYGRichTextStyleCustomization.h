@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "IPropertyTypeCustomization.h"
 #include "IDetailCustomization.h"
+#include "Widgets/SWidget.h"
 
 class IPropertyHandle;
 class FBYGRichTextStyleCustomization : public IDetailCustomization

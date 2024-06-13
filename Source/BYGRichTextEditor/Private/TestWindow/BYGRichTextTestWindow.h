@@ -39,6 +39,8 @@ public:
 
 	virtual void AddReferencedObjects( FReferenceCollector& Collector ) override;
 
+	FString GetReferencerName() const override;
+	
 	// SWidget interface
 	//virtual void Tick(const FGeometry& AllottedGeometry, const double InCurrentTime, const float InDeltaTime) override;
 

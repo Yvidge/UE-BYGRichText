@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "IPropertyTypeCustomization.h"
 #include "IDetailCustomization.h"
+#include "Input/Reply.h"
 
 // Stylesheet has many styles
 //   Style has many properties

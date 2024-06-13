@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Misc/DataValidation.h"
 #include "UObject/Object.h"
 
 #include "BYGRichTextRuntimeSettings.generated.h"
@@ -40,19 +41,19 @@ public:
 	FSoftObjectPath FallbackFontPath;
 
 #if WITH_EDITOR
-	EDataValidationResult IsDataValid(TArray<FText>& ValidationErrors) override
+	virtual EDataValidationResult IsDataValid(FDataValidationContext& DataValidationContext) const override
 	{
-		EDataValidationResult Result = Super::IsDataValid(ValidationErrors);
+		EDataValidationResult Result = Super::IsDataValid(DataValidationContext);
 
 		if (TagOpenCharacter.Len() <= 0)
 		{
-			ValidationErrors.Add(FText::FromString("Tag close character cannot be blank"));
+			DataValidationContext.AddError(FText::FromString("Tag close character cannot be blank"));
 		}
 		if (TagCloseCharacter.Len() <= 0)
 		{
-			ValidationErrors.Add(FText::FromString("Tag close character cannot be blank"));
+			DataValidationContext.AddError(FText::FromString("Tag close character cannot be blank"));
 		}
-		if (ValidationErrors.Num() > 0)
+		if (DataValidationContext.GetNumErrors() > 0)
 		{
 			return EDataValidationResult::Invalid;
 		}

@@ -3,6 +3,9 @@
 #include "BYGRichTextModule.h"
 #include "Brushes/SlateImageBrush.h"
 #include "Brushes/SlateNoResource.h"
+#include "Engine/Engine.h"
+#include "Engine/Texture2D.h"
+#include "Misc/CoreDelegates.h"
 #include "Styling/SlateStyle.h"
 #include "Settings/BYGRichTextStylesheet.h"
 #include "Settings/BYGRichTextStyle.h"
@@ -92,6 +95,11 @@ void FBYGRichTextModule::OnPostEngineInit()
 void FBYGRichTextModule::AddReferencedObjects( FReferenceCollector& Collector )
 {
 	Collector.AddReferencedObject( FallbackStylesheet );
+}
+
+FString FBYGRichTextModule::GetReferencerName() const
+{
+	return TEXT("FBYGRichTextModule");
 }
 
 #undef LOCTEXT_NAMESPACE

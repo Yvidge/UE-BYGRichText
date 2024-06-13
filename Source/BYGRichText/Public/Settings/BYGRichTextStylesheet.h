@@ -7,7 +7,12 @@
 #include "BYGStyleDisplayType.h"
 #include "Framework/Text/ITextLayoutMarshaller.h"
 #include "Framework/Text/RichTextLayoutMarshaller.h"
-#include <Engine/DataAsset.h>
+#include "Engine/DataAsset.h"
+
+#if WITH_EDITOR
+#include "Kismet2/CompilerResultsLog.h"
+#endif
+
 #include "BYGRIchTextStylesheet.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE( FBYGOnStylesheetPropertiesChangedSignature );

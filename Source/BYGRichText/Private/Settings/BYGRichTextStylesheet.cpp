@@ -3,10 +3,12 @@
 #include "Settings/BYGRichTextStylesheet.h"
 #include "Settings/BYGRichTextStyle.h"
 
-#include <Widgets/SBoxPanel.h>
-#include <Widgets/Text/SRichTextBlock.h>
+#include "Widgets/SBoxPanel.h"
+#include "Widgets/Text/SRichTextBlock.h"
+
+#include "UObject/UObjectIterator.h"
 #if WITH_EDITOR
-#include <Kismet2/CompilerResultsLog.h>
+#include "Kismet2/CompilerResultsLog.h"
 #endif
 
 #define LOCTEXT_NAMESPACE "BYGRichTextModule"

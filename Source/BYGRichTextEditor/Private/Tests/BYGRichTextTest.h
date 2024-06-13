@@ -36,6 +36,7 @@ protected:
 	{
 		//Collector.AddReferencedObject( DefaultStylesheet );
 	}
+	virtual FString GetReferencerName() const override;
 	//~ End FGCObject interface
 };
 

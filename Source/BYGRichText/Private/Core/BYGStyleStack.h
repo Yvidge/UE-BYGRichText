@@ -4,6 +4,7 @@
 
 #include "Settings/BYGRichTextStylesheet.h"
 #include "Settings/BYGRichTextProperty.h"
+#include "Settings/BYGRichTextStyle.h"
 
 struct FBYGStyleStack
 {

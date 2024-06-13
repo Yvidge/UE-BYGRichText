@@ -10,6 +10,8 @@
 #include <Tests/AutomationEditorCommon.h>
 #include <FunctionalTestBase.h>
 
+#include "Settings/BYGRichTextStyle.h"
+
 static const int TestFlags = (
 	EAutomationTestFlags::EditorContext
 	| EAutomationTestFlags::CommandletContext
@@ -145,8 +147,14 @@ bool FBYGRichTextParseTestBase::RunTest( const FString& Parameters )
 	return true;
 }
 
+FString FBYGRichTextParseTestBase::GetReferencerName() const
+{
+	return TEXT("FBYGRichTextParseTestBase");
+}
 
-IMPLEMENT_CUSTOM_COMPLEX_AUTOMATION_TEST( FBYGRichTextParseTest, FBYGRichTextParseTestBase, "BYG.RichText.Parse", TestFlags )
+
+IMPLEMENT_CUSTOM_COMPLEX_AUTOMATION_TEST(FBYGRichTextParseTest, FBYGRichTextParseTestBase, "BYG.RichText.Parse", TestFlags)
+
 void FBYGRichTextParseTest::GetTests( TArray<FString>& OutBeautifiedNames, TArray<FString>& OutTestCommands ) const
 {
 	FBYGRichTextParseTestBase::GetTests( OutBeautifiedNames, OutTestCommands );
