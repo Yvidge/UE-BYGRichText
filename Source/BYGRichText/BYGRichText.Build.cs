@@ -6,8 +6,7 @@ public class BYGRichText : ModuleRules
 {
 	public BYGRichText(ReadOnlyTargetRules Target) : base(Target)
 	{
-		//PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		PCHUsage = ModuleRules.PCHUsageMode.NoPCHs;
+		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
 		PublicDependencyModuleNames.AddRange(
 			new string[]

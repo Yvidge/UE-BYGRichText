@@ -4,8 +4,7 @@ public class BYGRichTextEditor : ModuleRules
 {
 	public BYGRichTextEditor(ReadOnlyTargetRules Target) : base(Target)
 	{
-		//PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-		PCHUsage = ModuleRules.PCHUsageMode.NoPCHs;
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 		
 		PrivateIncludePathModuleNames.AddRange(
 			new string[] {
