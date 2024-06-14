@@ -12,6 +12,7 @@
 #include <Modules/ModuleManager.h>
 #include "BYGRichTextModule.h"
 #include "Settings/BYGRichTextStylesheet.h"
+#include "Styling/SlateStyle.h"
 
 #define LOCTEXT_NAMESPACE "BYGRichText"
 
@@ -136,7 +137,9 @@ void UBYGRichTextBlock::SetText( const FText& InText )
 {
 	Text = InText;
 
-	RebuildWidget();
+	// Calling RebuildWidget for some reason causes the text update to stop
+	//RebuildWidget();
+	RebuildContents();
 }
 
 void UBYGRichTextBlock::CreateDecorators( TArray< TSharedRef< class ITextDecorator > >& OutDecorators )
