@@ -41,7 +41,10 @@ public:
 	virtual void ReleaseSlateResources( bool bReleaseChildren ) override;
 	// End of UVisual interface
 
+	UFUNCTION(BlueprintCallable, Category = "Rich Text")
 	void SetText( const FText& InText );
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Rich Text")
 	inline FText GetText() { return Text; }
 
 
